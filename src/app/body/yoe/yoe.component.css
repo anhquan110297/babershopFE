@@ -83,3 +83,18 @@
   margin-bottom: 0;
   margin-top: 4px;
 }
+
+@media (max-width: 749px) {
+  .yoe-show {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  .yoe-heading {
+    font-size: 35px;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .yoe-show {
+    margin-bottom: 24px;
+  }
+}

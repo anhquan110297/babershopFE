@@ -6,6 +6,9 @@ import { BodyComponent } from './body.component';
 import {ServicesComponent} from "./services/services.component";
 import { YoeComponent } from './yoe/yoe.component';
 import { TeamComponent } from './team/team.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { BookingComponent } from './booking/booking.component';
+import { GALLERYComponent } from './gallery/gallery.component';
 
 
 
@@ -17,7 +20,10 @@ import { TeamComponent } from './team/team.component';
     BodyComponent,
     ServicesComponent,
     YoeComponent,
-    TeamComponent
+    TeamComponent,
+    PricingComponent,
+    BookingComponent,
+    GALLERYComponent
   ],
   exports: [
     BodyComponent

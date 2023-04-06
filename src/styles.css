@@ -591,7 +591,7 @@
   }
 }
 
-h1, h2, h3, h4, h5 , .header-nav-items > .header-nav-items-link{
+h1, h2, h3, h4, h5, .header-nav-items > .header-nav-items-link {
   font-family: 'Barlow Condensed', Arial, sans-serif;
 }
 
@@ -617,3 +617,36 @@ body {
   --primary-color: #bf925b;
   /*--secondary-color : */
 }
+
+.before-animate {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.after-animate {
+  -webkit-animation-duration: .5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+

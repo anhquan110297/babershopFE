@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {HeaderComponent} from "./header/header.component";
 import {LoginComponent} from "./header/login/login.component";
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -9,12 +10,14 @@ import {LoginComponent} from "./header/login/login.component";
   declarations: [
     HeaderComponent,
     LoginComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class ShareModule { }

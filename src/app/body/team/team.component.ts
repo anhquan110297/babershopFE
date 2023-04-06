@@ -34,9 +34,14 @@ export class TeamComponent implements OnInit{
 
   getDOM(staff: HTMLImageElement) {
     let staffImgClassList = document.querySelectorAll('.team-img');
+    let src = staff.getAttribute('src');
+    // @ts-ignore
     staffImgClassList.forEach(element => {
       element.classList.contains('team-img-border') ? element.classList.remove('team-img-border') : undefined;
     });
     staff.classList.add('team-img-border');
+    // thay doi image
+    // @ts-ignore
+    document.querySelector('.team-info-img').src = src;
   }
 }
