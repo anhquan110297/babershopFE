@@ -1,0 +1,73 @@
+<header class="header" [ngClass]="{'header' : !isScroll , 'header-scroll' : isScroll}">
+  <div class="grid wide">
+    <nav class="header-nav">
+        <a href="" class="header-logo-wrapper">
+          <img src="assets/img/white-logo.png" alt="" class="header-logo">
+        </a>
+        <ul class="header-nav-list hide-on-mobile-table">
+          <li class="header-nav-items">
+            <a href="" class="header-nav-item-link"
+               [ngClass]="{'header-nav-item-link' : !isScroll,'header-nav-item-link-scrolling' : isScroll}">
+              Home
+            </a>
+          </li>
+          <li class="header-nav-items">
+            <a href="" class="header-nav-item-link"
+               [ngClass]="{'header-nav-item-link' : !isScroll,'header-nav-item-link-scrolling' : isScroll}">
+              Services
+            </a>
+          </li>
+          <li class="header-nav-items">
+            <a href="" class="header-nav-item-link"
+               [ngClass]="{'header-nav-item-link' : !isScroll,'header-nav-item-link-scrolling' : isScroll}">
+              Pricing
+            </a>
+          </li>
+          <li class="header-nav-items">
+            <a href="" class="header-nav-item-link"
+               [ngClass]="{'header-nav-item-link' : !isScroll,'header-nav-item-link-scrolling' : isScroll}">
+              Gallery
+            </a>
+          </li>
+          <li class="header-nav-items">
+            <a href="" class="header-nav-item-link"
+               [ngClass]="{'header-nav-item-link' : !isScroll,'header-nav-item-link-scrolling' : isScroll}">
+              About Us
+            </a>
+          </li>
+        </ul>
+      <label for="navMobileInput" class="header-nav-mobile-tablet-btn"
+             [ngClass]="{'header-nav-mobile-tablet-btn' : !isScroll, 'header-nav-mobile-tablet-btn-scrolling' : isScroll}">
+        <i class="fa-solid fa-bars header-bar-icon"></i>
+      </label>
+      <input type="checkbox" class="nav-mobile-input" id="navMobileInput" hidden>
+      <label for="navMobileInput" class="header-nav-overlay"></label>
+      <div class="header-nav-mobile-tablet">
+          <div class="header-nav-mobile-subhead-wrapper">
+            <h1 class="header-nav-mobile-subhead">MENU</h1>
+          </div>
+          <ul class="header-nav-list-mobile">
+            <li class="header-nav-item-mobile">
+              <a href="" class="header-nav-item-link-mobile">HOME</a>
+            </li>
+            <li class="header-nav-item-mobile">
+              <a href="" class="header-nav-item-link-mobile">SERVICES</a>
+            </li>
+            <li class="header-nav-item-mobile">
+              <a href="" class="header-nav-item-link-mobile">PRICING</a>
+            </li>
+            <li class="header-nav-item-mobile">
+              <a href="" class="header-nav-item-link-mobile">GALLERY</a>
+            </li>
+            <li class="header-nav-item-mobile">
+              <a href="" class="header-nav-item-link-mobile">ABOUT US</a>
+            </li>
+          </ul>
+          <label for="navMobileInput" class="x-mark-wrapper">
+            X
+          </label>
+      </div>
+    </nav>
+<!--    <app-login></app-login>-->
+  </div>
+</header>

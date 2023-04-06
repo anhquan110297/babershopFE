@@ -1,0 +1,86 @@
+.service-parent-container {
+  background-color: #F5F2EA;
+}
+
+.service-child-container {
+  padding: 112px;
+}
+
+.service-heading-wrapper {
+  text-align: center;
+}
+
+.service-subheading {
+  color: var(--primary-color);
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+}
+
+.service-heading {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 36px 0;
+}
+
+.service-description {
+  color: gray;
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 400;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.service-card-wrapper {
+
+}
+
+.service-card {
+  padding: 40px 25px;
+  text-align: center;
+}
+
+.service-card-icon {
+  margin-bottom: 12px;
+}
+
+.service-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+.service-card-text {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: gray;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 749px) {
+  .service-child-container {
+    padding: 0 15px;
+  }
+  .service-parent-container {
+    padding: 112px 0;
+  }
+  .service-heading {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .service-child-container {
+    padding: 0 15px;
+  }
+  .service-parent-container {
+    padding: 112px 0;
+  }
+}

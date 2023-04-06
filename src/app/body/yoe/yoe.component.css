@@ -1,0 +1,85 @@
+.yoe-img-wrapper {
+  height: 100%;
+}
+.yoe-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 650px;
+  /*padding: 12px;*/
+}
+
+.yoe-content {
+  text-align:left;
+  padding : 100px 12px 0 24px
+
+}
+
+.yoe-subheading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #bf925b;
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  margin: 0 0 24px 0;
+}
+.yoe-heading {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.yoe-text {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: gray;
+  margin-top: 12px;
+}
+.yoe-show {
+  background-color: #bf925b;
+  padding: 12px;
+  display: flex;
+  width: 65%;
+  margin-top: 48px;
+}
+
+.yoe-show-calendar-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: black;
+  display: flex;
+}
+
+.yoe-calendar {
+  font-size: 36px;
+  color: white;
+  margin: auto;
+}
+
+.yoe-number-increase {
+  margin-left: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yoe-number {
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.yoe-description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 4px;
+}

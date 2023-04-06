@@ -1,0 +1,74 @@
+.team-container {
+  background-color: black;
+  padding: 80px 0;
+}
+
+.team-subheading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #bf925b;
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  margin: 0 0 24px 0;
+}
+.team-heading {
+  text-align: center;
+}
+.team-main-heading {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  color: white;
+}
+.team-img-wrapper {
+  text-align: center;
+}
+
+.team-img {
+  width: 120px;
+  height: 140px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 4px;
+  background-clip: padding-box;
+}
+.team-img-border {
+  border: solid 4px #bf925b;
+}
+.team-img:hover {
+  cursor: pointer;
+}
+
+.team-info-wrapper {
+  margin-top: 64px;
+}
+.team-info {
+  display: flex;
+}
+.team-info-img {
+  width: 1200px;
+  height: 300px;
+  margin: 0 4px;
+  background-clip: padding-box;
+}
+.team-about {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.team-info-name {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.team-info-description {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: gray;
+}

@@ -1,0 +1,233 @@
+.header {
+  background-color: transparent;
+  -ms-transition: background-color 0.6s linear;
+  transition: background-color 0.6s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  /*height: 60px;*/
+}
+
+.header-scroll {
+  /*transform: translateY(-100%);*/
+  transition: background-color 0.6s ease;
+  -ms-transition: background-color 0.6s linear;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: auto;
+  position: relative;
+  align-items: center;
+}
+
+.header-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  padding: 16px 0;
+  height: 88px;
+  width: 120px;
+}
+
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+.header-nav-item-link {
+  color: #C1C0C0;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.header-nav-item-link:hover {
+  color: white;
+  transition: color 0.2s ease;
+}
+.header-nav-item-link-scrolling {
+  color: black;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.header-nav-item-link-scrolling:hover {
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+.header-nav-mobile-tablet-btn {
+  display: none;
+  font-size: 1.6rem;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  color: white;
+}
+.header-nav-mobile-tablet-btn-scrolling {
+  display: none;
+  font-size: 1.6rem;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+  color: black;
+}
+
+.header-bar-icon {
+  margin-right: 8px;
+}
+
+.header-nav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: fadeIn linear 0.1s;
+}
+
+.header-nav-mobile-tablet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 100%;
+  background-color: white;
+  transform: translateX(100%);
+  opacity: 0;
+  display: none;
+  transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.header-nav-mobile-subhead-wrapper {
+  margin-bottom: 4px;
+}
+
+.header-nav-mobile-subhead {
+  margin: 0;
+  padding: 16px;
+  border-bottom: #C1C0C0 solid 0.5px;
+  text-align: center;
+  line-height: 100%;
+}
+
+.header-nav-list-mobile {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.header-nav-item-mobile {
+}
+
+.header-nav-item-link-mobile {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6rem;
+  border-bottom: solid #C1C0C0 0.5px;
+  display: block;
+  padding: 15px 20px;
+  font-family: 'Barlow Condensed', Arial, sans-serif;
+}
+.x-mark-wrapper {
+  position: absolute;
+  font-size: 1.6rem;
+  color : #333;
+  top: 12px;
+  left: 12px;
+}
+.nav-mobile-input:checked ~ .header-nav-overlay {
+  display: block;
+}
+.nav-mobile-input:checked ~ .header-nav-mobile-tablet {
+  transform: translateX(0);
+  opacity: 1;
+}
+/*responsivie header*/
+/*mobile va tablet*/
+@media (max-width: 1023px) {
+  .hide-on-mobile-table {
+    display: none;
+  }
+
+  .header-nav-mobile-tablet {
+    display: block;
+  }
+  .header-nav-mobile-tablet-btn {
+    display: block;
+  }
+  .header-nav-mobile-tablet-btn-scrolling {
+    display: block;
+  }
+  .header-nav {
+    padding: 0 8px;
+  }
+}
+
+/*tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none;
+  }
+  .header-nav-mobile-tablet-btn {
+    display: block;
+  }
+  .header-nav-mobile-tablet-btn-scrolling {
+    display: block;
+  }
+  .header-nav {
+    padding: 0 8px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 749px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .header-nav-mobile-tablet {
+    width: 100%;
+    max-width: 100%;
+  }
+  .header-nav-mobile-tablet-btn {
+    display: block;
+  }
+  .header-nav-mobile-tablet-btn-scrolling {
+    display: block;
+  }
+  .header-nav {
+    padding: 0 8px;
+  }
+
+  /*keyframe*/
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+
+
