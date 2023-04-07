@@ -1,0 +1,116 @@
+.footer-container {
+  background-color: black;
+  padding :80px 0 80px 0;
+}
+
+.footer-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+.footer-header:hover {
+  color: #bf925b;
+}
+.footer-content {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-p {
+  line-height: 1.8;
+  padding: 36px 0;
+}
+.team-info-social {
+  font-size: 1.8rem;
+  color: white;
+  background: var(--primary-color);
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.team-info-social ~ .team-info-social {
+  margin-left: 8px;
+}
+
+.team-info-social:hover {
+  color: #bf925b;
+  background-color: #e5e2e2;
+  transition: color linear 0.2s, background-color linear 0.2s;
+  outline: #bf925b solid 1px;
+}
+.footer-explore-list {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 52px;
+}
+
+.footer-explore-item {
+  font-size: 2rem;
+}
+.footer-explore-item:hover {
+  cursor: pointer;
+  color: #bf925b;
+}
+.footer-explore-item ~ .footer-explore-item {
+  margin-top: 16px;
+}
+.address {
+  line-height: 1.2;
+
+}
+.address:hover{
+  line-height: 1.2;
+  cursor: auto;
+  color: rgba(255, 255, 255, 0.5);;
+}
+.footer-icon {
+  color: #bf925b;
+  margin-right: 4px;
+}
+.footer-icon:hover{
+  cursor: default;
+}
+
+
+@media (max-width: 749px) {
+  .footer-col-wrapper {
+    padding: 0 16px;
+  }
+  .footer-p {
+    line-height: 1.8;
+    padding: 8px 0;
+  }
+  .footer-col-wrapper ~ .footer-col-wrapper {
+    margin-top: 20px;
+  }
+
+  .footer-explore-list {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 32px;
+  }
+  .footer-explore-item {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .footer-col-wrapper {
+    padding: 0 16px;
+  }
+  .footer-p {
+    line-height: 1.8;
+    padding: 8px 0;
+  }
+  .footer-col-wrapper ~ .footer-col-wrapper {
+    margin-top: 20px;
+  }
+
+  .footer-explore-list {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 32px;
+  }
+  .footer-explore-item {
+    font-size: 1.6rem;
+  }
+}
