@@ -1,17 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {BannerComponent} from "./banner/banner.component";
-import { WelcomeComponent } from './welcome/welcome.component';
-import { BodyComponent } from './body.component';
+import {WelcomeComponent} from './welcome/welcome.component';
+import {BodyComponent} from './body.component';
 import {ServicesComponent} from "./services/services.component";
-import { YoeComponent } from './yoe/yoe.component';
-import { TeamComponent } from './team/team.component';
-import { PricingComponent } from './pricing/pricing.component';
-import { BookingComponent } from './booking/booking.component';
-import { GALLERYComponent } from './gallery/gallery.component';
-
-
-
+import {YoeComponent} from './yoe/yoe.component';
+import {TeamComponent} from './team/team.component';
+import {PricingComponent} from './pricing/pricing.component';
+import {BookingComponent} from './booking/booking.component';
+import {GalleryComponent} from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +20,7 @@ import { GALLERYComponent } from './gallery/gallery.component';
     TeamComponent,
     PricingComponent,
     BookingComponent,
-    GALLERYComponent
+    GalleryComponent
   ],
   exports: [
     BodyComponent
@@ -32,4 +29,5 @@ import { GALLERYComponent } from './gallery/gallery.component';
     CommonModule
   ]
 })
-export class BodyModule { }
+export class BodyModule {
+}

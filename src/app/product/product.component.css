@@ -1,0 +1,138 @@
+.banner-other-route {
+  background-image: url('src/assets/img/booking-1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.route-heading {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 3.4rem;
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+
+.route {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 250%);
+  left: 50%;
+  font-size: 2.4rem;
+  color: white;
+  /*font-weight: 500;*/
+  margin: 0;
+}
+
+.subheader {
+  margin: 16px 0 0 0;
+  padding: 16px 0;
+  border-bottom: 1px solid #C1C0C0;
+  font-size: 1.8rem;
+}
+
+.category-list {
+  padding-left: 0;
+  list-style: none;
+  font-size: 2rem;
+}
+
+
+/*product css*/
+.product-wrapper {
+  padding: 0 12px;
+}
+
+.product-card {
+  margin: 12px 0;
+  text-decoration: none;
+
+}
+
+.product-card:hover {
+  outline: solid #C1C0C0 0.5px;
+}
+
+.product-img {
+  height: 250px;
+  width: 100%;
+}
+
+.product-name, .product-price {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product-name {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: black;
+  margin-top: 8px;
+}
+
+.product-name:hover {
+  cursor: pointer;
+  color: #ef0c0c;
+}
+
+.product-price {
+  padding: 8px 16px;
+  font-size: 1.8rem;
+  color: red;
+  margin-top: 8px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.pageList {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin: 0;
+}
+
+.page {
+  display: inline-block;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  font-size: 1.6rem;
+  line-height: 36px;
+  text-align: center;
+  margin: 0 12px;
+}
+
+.test {
+  outline: black solid 0.5px;
+}
+
+.page:hover, .btn-change-page:hover {
+  background: rgba(195, 191, 191, 0.18);
+}
+
+
+.btn-change-page {
+  height: 36px;
+  width: 68px;
+  padding: 4px 8px;
+  outline: none;
+  color: black;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: #333333 solid 0.5px;
+}
+
+

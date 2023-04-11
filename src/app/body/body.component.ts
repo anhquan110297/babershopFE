@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-body',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
+  @ViewChild('serviceRef') serviceRef : Component | undefined;
+
+  constructor() {
+  }
+
 
 }

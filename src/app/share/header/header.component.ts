@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 export class HeaderComponent implements OnInit {
   readonly SCROLL_TRIGGER = 100;
   isScroll : boolean;
+  @ViewChild('bodyRef') serviceRef : ElementRef | undefined;
 
   constructor() {
     this.isScroll = false;
@@ -28,6 +29,4 @@ export class HeaderComponent implements OnInit {
         document.querySelector('.header-logo').src = 'assets/img/white-logo.png';
       }
   }
-
-
 }

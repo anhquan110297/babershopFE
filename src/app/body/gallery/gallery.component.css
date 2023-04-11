@@ -5,11 +5,11 @@
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   /*den trang*/
   filter: grayscale(100%);
+  transition: all 0.3s linear 0s;
 }
 
 .gallery-img:hover {
   transform: scale(1.2);
-  transition: all 0.3s linear 0s;
   filter: none;
 }
 .gallery-img-wrapper {

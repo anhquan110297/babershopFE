@@ -1,0 +1,43 @@
+<div class="banner-other-route">
+  <p class="route-heading">Products</p>
+  <p class="route">Home / Product</p>
+</div>
+<section class="product-container">
+  <div class="grid wide">
+    <div class="row">
+      <div class="col l-2 m-2 c-0 filter-wrapper">
+        <h3 class="subheader">
+          FILTER
+        </h3>
+
+      </div>
+      <div class="col l-10 m-10 c-12">
+        <div class="row product-wrapper">
+          <ng-container
+            *ngFor="let product of productList.slice(getPageBegin(), getPageEnd())">
+            <a class="col no-gutters l-4 m-12 c-12 product-card" href="#">
+              <img [src]="product.img" alt="" class="product-img">
+              <p class="product-name">{{product.name}}</p>
+              <p class="product-price">{{product.price}}$</p>
+            </a>
+          </ng-container>
+        </div>
+        <div class="pagination">
+          <button (click)="previousPage()" id="previousBtn" disabled class="btn-change-page">Previous</button>
+          <ul class="pageList">
+            <li class="page"
+                *ngFor="let item of tempArr;let i = index"
+                #pageDOM
+                (click)="jumpPage(i+1, pageDOM)">
+              {{i + 1}}
+            </li>
+          </ul>
+          <button (click)="nextPage()" id="nextBtn" class="btn-change-page">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

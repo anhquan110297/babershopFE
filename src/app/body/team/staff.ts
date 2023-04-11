@@ -3,3 +3,9 @@ export interface Staff {
   img : string;
   description : string;
 }
+
+class Category {
+
+}
+
+new Category();

@@ -8,31 +8,31 @@
     </div>
     <div class="row">
       <div class="col l-12 c-12 m-12 team-img-wrapper before-animate fadeInUp after-animate">
-        <img src="/assets/img/staff-1.jpg" alt="" class="team-img" #staffOne (click)="getDOM(staffOne)">
-        <img src="/assets/img/staff-2.jpg" alt="" class="team-img" #staffTwo (click)="getDOM(staffTwo)">
-        <img src="/assets/img/staff-3.jpg" alt="" class="team-img" #staffThree (click)="getDOM(staffThree)">
-        <img src="/assets/img/staff-4.jpg" alt="" class="team-img" #staffFour (click)="getDOM(staffFour)">
+        <ng-container *ngFor="let staff of staffList">
+          <img [src]="staff.img" alt="" class="team-img" #DOM (click)="getDOM(DOM,staff)">
+        </ng-container>
       </div>
     </div>
     <div class="row team-info-wrapper before-animate fadeInUp after-animate">
       <div class="col l-12 c-12 m-12 team-info">
-        <img src="/assets/img/staff-1.jpg" alt="" class="team-info-img">
-        <div class="team-about">
-          <p class="team-info-name">JAMES EDISON</p>
-          <p class="team-info-description">
-            Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-          </p>
-          <div class="team-info-social-wrapper">
-            <i class="fa-brands fa-facebook team-info-social"></i>
-            <i class="fa-brands fa-instagram team-info-social"></i>
-            <i class="fa-brands fa-twitter team-info-social"></i>
-            <i class="fa-brands fa-tiktok team-info-social" ></i>
-          </div>
-          <button class="team-info-booking">
-            make schedule
-          </button>
-        </div>
+          <ng-container [ngSwitch]="staff.name">
+            <img *ngSwitchCase="staff.name" [src]="staff.img" alt="" class="team-info-img">
+            <div class="team-about">
+              <p class="team-info-name">{{staff.name}}</p>
+              <p class="team-info-description">
+                {{staff.description}}
+              </p>
+              <div class="team-info-social-wrapper">
+                <i class="fa-brands fa-facebook team-info-social"></i>
+                <i class="fa-brands fa-instagram team-info-social"></i>
+                <i class="fa-brands fa-twitter team-info-social"></i>
+                <i class="fa-brands fa-tiktok team-info-social" ></i>
+              </div>
+              <button class="team-info-booking">
+                make schedule
+              </button>
+            </div>
+          </ng-container>
         <div class="team-info-services">
           <p class="team-info-name">SERVICES</p>
           <ul class="team-info-service-list">

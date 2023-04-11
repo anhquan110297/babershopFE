@@ -51,6 +51,7 @@
 
 .booking-form-input::placeholder {
   color: #bf925b;
+  opacity: 0.6;
 }
 
 .booking-submit-btn {
