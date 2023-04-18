@@ -2,31 +2,103 @@
   <p class="route-heading">Products</p>
   <p class="route">Home / Product</p>
 </div>
-<section class="product-container">
+<div class="product-container">
   <div class="grid wide">
     <div class="row">
-      <div class="col l-2 m-2 c-0 filter-wrapper">
+      <div class="col l-2 m-0 c-0 filter-wrapper">
         <h3 class="subheader">
           FILTER
         </h3>
-
+        <div>
+          <h3 class="main-header" (click)="categoryFilter(pomadeDOM.textContent)" #pomadeDOM>Pomade</h3>
+          <ul class="filter-list">
+            <ng-container *ngFor="let productCategory of typeList">
+              <label class="filter-item" *ngIf="productCategory">
+                <input type="checkbox" (change)="onChangeFilter(inputDOM,productCategory!)" #inputDOM>
+                {{productCategory}}
+              </label>
+            </ng-container>
+          </ul>
+        </div>
+        <div>
+          <h3 class="main-header" (click)="categoryFilter(combDOM.textContent)" #combDOM>Comb</h3>
+          <ul class="filter-list">
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+          </ul>
+        </div>
+        <div>
+          <h3 class="main-header" (click)="categoryFilter(shampooDOM.textContent)" #shampooDOM>Shampoo</h3>
+          <ul class="filter-list">
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+            <label class="filter-item">
+              <input type="checkbox">
+              Lorem ipsum dolor.
+            </label>
+          </ul>
+        </div>
+        <div>
+          <h3 class="main-header">
+            Price
+          </h3>
+          <div class="price-input-wrapper">
+            <input type="number" class="input-price" #minPrice min="0">
+            <span class="temp-css">-</span>
+            <input type="number" class="input-price" #maxPrice min="0">
+          </div>
+          <button class="button-apply" (click)="searchByPrice(minPrice.value,maxPrice.value)">
+            apply
+          </button>
+        </div>
+        <h3 class="subheader clear-filter-btn" (click)="clearFilter()">
+          CLEAR FILTER
+        </h3>
       </div>
-      <div class="col l-10 m-10 c-12">
+      <div class="col l-10 m-12 c-12">
+        <div class="row filter-btn-mobile-wrapper">
+          <label for="filter-mobile-input" class="filter-btn-mobile">Filter</label>
+        </div>
         <div class="row product-wrapper">
           <ng-container
-            *ngFor="let product of productList.slice(getPageBegin(), getPageEnd())">
-            <a class="col no-gutters l-4 m-12 c-12 product-card" href="#">
+            *ngFor="let product of productListRef.slice(getPageBegin(), getPageEnd())">
+            <div class="col l-4 m-6 c-12 product-card">
               <img [src]="product.img" alt="" class="product-img">
               <p class="product-name">{{product.name}}</p>
               <p class="product-price">{{product.price}}$</p>
-            </a>
+              <button class="add-cart" (click)="addToCart(product)">ADD TO CART</button>
+            </div>
           </ng-container>
         </div>
-        <div class="pagination">
+        <div class="pagination" *ngIf="productListRef.length !== 0">
           <button (click)="previousPage()" id="previousBtn" disabled class="btn-change-page">Previous</button>
           <ul class="pageList">
             <li class="page"
-                *ngFor="let item of tempArr;let i = index"
+                *ngFor="let item of totalPageArr;let i = index"
                 #pageDOM
                 (click)="jumpPage(i+1, pageDOM)">
               {{i + 1}}
@@ -37,7 +109,73 @@
       </div>
     </div>
   </div>
-</section>
+</div>
+<!--mobile-->
+<input type="checkbox" class="filter-mobile-input" id="filter-mobile-input" hidden>
+<div class="filter-block">
+  <label for="filter-mobile-input" class="filter-close-btn">X</label>
+  <div class="filter-wrapper">
+    <h3 class="subheader">
+      FILTER
+    </h3>
+    <div>
+      <h3 class="main-header" (click)="categoryFilter(pomadeDOM.textContent)" #pomadeDOM>Pomade</h3>
+      <ul class="filter-list">
+        <ng-container *ngFor="let productCategory of typeList">
+          <label class="filter-item" *ngIf="productCategory">
+            <input type="checkbox" (change)="onChangeFilter(inputDOM,productCategory!)" #inputDOM>
+            {{productCategory}}
+          </label>
+        </ng-container>
+      </ul>
+    </div>
+    <div>
+      <h3 class="main-header" (click)="categoryFilter(combDOM.textContent)" #combDOM>Comb</h3>
+      <ul class="filter-list">
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+      </ul>
+    </div>
+    <div>
+      <h3 class="main-header" (click)="categoryFilter(shampooDOM.textContent)" #shampooDOM>Shampoo</h3>
+      <ul class="filter-list">
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+        <label class="filter-item">
+          <input type="checkbox">
+          Lorem ipsum dolor.
+        </label>
+      </ul>
+    </div>
+  </div>
+  <h3 class="subheader clear-filter-btn" (click)="clearFilter()">
+    CLEAR FILTER
+  </h3>
+</div>
 
 
 

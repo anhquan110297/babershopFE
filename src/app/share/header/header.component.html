@@ -35,11 +35,51 @@
             About Us
           </a>
         </li>
+        <li class="header-nav-items cart">
+          <a class="header-nav-item-link"
+             [ngClass]="{'header-nav-item-link' : !isScroll,'header-nav-item-link-scrolling' : isScroll}">
+            <i class="fa-sharp fa-solid fa-cart-shopping cart-icon"></i>
+          </a>
+          <ul class="cart-list">
+            <div class="cart-list-item-wrapper" *ngIf="(productList | async)?.length !== 0">
+              <li *ngFor="let entries of (productList | async)" class="cart-item-wrapper">
+                <div class="cart-img-wrapper">
+                  <img [src]="entries.product.img" class="cart-img" alt="">
+                </div>
+                <div class="cart-item-info">
+                  <span class="cart-name">{{entries.product.name}}</span>
+                  <span class="cart-price">{{entries.product.price * entries.count}}$</span>
+                </div>
+                <div class="cart-quantity-wrapper">
+                  <button class="cart-operator" (click)="less(entries.product)">-</button>
+                  <span class="cart-quantity">{{entries.count}}</span>
+                  <button class="cart-operator" (click)="more(entries.product)">+</button>
+                </div>
+              </li>
+            </div>
+            <div class="cart-list-item-wrapper empty-cart" *ngIf="(productList | async)?.length === 0">
+              <img src="assets/img/empty-cart.png" alt="" class="empty-cart-img">
+            </div>
+            <div class="cart-footer">
+              <span class="cart-total-price-wrapper">Total:
+                <span *ngIf="totalPrice" class="cart-total-price">{{totalPrice | async}}$</span>
+                <span *ngIf="!totalPrice" class="cart-total-price">0$</span>
+              </span>
+              <button class="cart-payment" (click)="clearCart()">Checkout</button>
+            </div>
+          </ul>
+        </li>
       </ul>
-      <label for="navMobileInput" class="header-nav-mobile-tablet-btn"
-             [ngClass]="{'header-nav-mobile-tablet-btn' : !isScroll, 'header-nav-mobile-tablet-btn-scrolling' : isScroll}">
-        <i class="fa-solid fa-bars header-bar-icon"></i>
-      </label>
+      <div class="header-nav-mobile-tablet-btn-wrapper">
+        <a class="header-nav-mobile-tablet-btn"
+               [ngClass]="{'header-nav-mobile-tablet-btn' : !isScroll, 'header-nav-mobile-tablet-btn-scrolling' : isScroll}">
+          <i class="fa-sharp fa-solid fa-cart-shopping cart-icon"></i>
+        </a>
+        <label for="navMobileInput" class="header-nav-mobile-tablet-btn"
+               [ngClass]="{'header-nav-mobile-tablet-btn' : !isScroll, 'header-nav-mobile-tablet-btn-scrolling' : isScroll}">
+          <i class="fa-solid fa-bars header-bar-icon"></i>
+        </label>
+      </div>
       <input type="checkbox" class="nav-mobile-input" id="navMobileInput" hidden>
       <label for="navMobileInput" class="header-nav-overlay"></label>
       <div class="header-nav-mobile-tablet">
